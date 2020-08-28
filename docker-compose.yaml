@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  nestjs:
+    container_name: NestJs
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - 3000:3000
+    command: npm run start:dev
