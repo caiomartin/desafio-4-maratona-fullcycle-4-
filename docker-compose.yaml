@@ -2,11 +2,10 @@ version: '3.7'
 
 services:
   nestjs:
-    image: caiomartin/desafio-5-full-cycle:latest
     container_name: NestJs
     build:
       context: .
-      target: development
+      dockerfile: Dockerfile
     volumes:
       - .:/usr/src/app
     ports:
